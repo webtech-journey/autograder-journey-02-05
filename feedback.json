@@ -1,0 +1,134 @@
+{
+  "base_tests": [
+    {
+      "test_base.py::test_html_html_tag": [
+        "A tag <html> está corretamente presente, iniciando o documento HTML.",
+        "O documento HTML está sem a tag <html>. Adicione-a para garantir a estrutura correta."
+      ]
+    },
+    {
+      "test_base.py::test_bootstrap_linked": [
+        "O Bootstrap está corretamente vinculado via CDN.",
+        "O Bootstrap não foi encontrado. Certifique-se de incluir a CDN no <head> do HTML."
+      ]
+    },
+    {
+      "test_base.py::test_navbar_present": [
+        "Um elemento <nav> com classes do Bootstrap foi encontrado.",
+        "A navbar com Bootstrap não foi encontrada. Utilize as classes 'navbar' corretamente."
+      ]
+    },
+    {
+      "test_base.py::test_sections_exist": [
+        "Todas as seções obrigatórias estão presentes no HTML.",
+        "Uma ou mais seções obrigatórias estão ausentes. Verifique se usou os IDs: apresentacao, habilidades, aprendizado, contato."
+      ]
+    },
+    {
+      "test_base.py::test_footer_exists": [
+        "A tag <footer> está presente no HTML.",
+        "A página está sem um rodapé. Adicione um <footer> com informações de contato ou créditos."
+      ]
+    },
+    {
+      "test_base.py::test_responsive_layout": [
+        "O layout responsivo com container, row e col do Bootstrap foi identificado.",
+        "O layout não utiliza a estrutura responsiva do Bootstrap. Utilize 'container', 'row' e 'col' corretamente."
+      ]
+    },
+    {
+      "test_base.py::test_custom_css_file": [
+        "Um arquivo CSS personalizado foi vinculado ao HTML.",
+        "Nenhum arquivo CSS personalizado foi encontrado. Adicione um <link> com href para seu arquivo CSS."
+      ]
+    },
+    {
+      "test_base.py::test_meta_viewport_present": [
+        "A meta tag de viewport foi encontrada, garantindo responsividade em dispositivos móveis.",
+        "A meta tag de viewport está ausente. Adicione <meta name='viewport' content='width=device-width, initial-scale=1.0'> no <head>."
+      ]
+    },
+    {
+      "test_base.py::test_grid_diversity": [
+        "Diversas classes de grid do Bootstrap foram utilizadas (ex: col-sm, col-md, col-lg).",
+        "Apenas uma variação de grid foi usada. Use diferentes classes para garantir responsividade adequada."
+      ]
+    }
+  ],
+  "bonus_tests": [
+    {
+      "test_bonus.py::test_fontawesome_used": [
+        "O FontAwesome foi corretamente vinculado e está sendo usado para ícones.",
+        "FontAwesome não foi encontrado. Considere adicionar ícones para enriquecer visualmente a página."
+      ]
+    },
+    {
+      "test_bonus.py::test_profile_picture_used": [
+        "Uma imagem de perfil está presente na apresentação.",
+        "Nenhuma imagem de perfil foi encontrada. Adicione uma imagem para tornar a apresentação mais pessoal."
+      ]
+    },
+    {
+      "test_bonus.py::test_contact_button_functional": [
+        "Um botão estilizado foi encontrado com funcionalidade de contato (e-mail ou link).",
+        "Botão de contato ausente ou sem ação. Adicione um botão com 'mailto:' ou link funcional."
+      ]
+    },
+    {
+      "test_bonus.py::test_custom_classes_used": [
+        "Classes personalizadas estão sendo usadas além das do Bootstrap.",
+        "Nenhuma classe personalizada encontrada. Personalize seu site além dos estilos prontos do Bootstrap."
+      ]
+    },
+    {
+      "test_bonus.py::test_hover_effects_or_transitions": [
+        "Efeitos visuais como hover ou transições foram identificados no CSS externo.",
+        "Nenhum efeito visual detectado no CSS externo. Adicione efeitos no arquivo style.css, evitando estilos inline."
+      ]
+    },
+    {
+      "test_bonus.py::test_accessibility_attributes": [
+        "Atributos de acessibilidade como alt, aria ou label foram utilizados.",
+        "Nenhum atributo de acessibilidade identificado. Considere adicionar 'alt', 'aria-*' ou 'label'."
+      ]
+    }
+  ],
+  "penalty_tests": [
+    {
+      "test_penalty.py::test_no_bootstrap_used": [
+        "Classes do Bootstrap foram encontradas no HTML.",
+        "Nenhuma classe do Bootstrap foi detectada. É obrigatório utilizar Bootstrap na construção da página."
+      ]
+    },
+    {
+      "test_penalty.py::test_no_sections": [
+        "Seções principais estão devidamente presentes no HTML.",
+        "As seções obrigatórias estão ausentes. Adicione seções com os IDs: apresentacao, habilidades, aprendizado, contato."
+      ]
+    },
+    {
+      "test_penalty.py::test_no_contact_info": [
+        "Informações de contato (e-mail, redes sociais ou link) foram encontradas.",
+        "Nenhuma informação de contato foi detectada. Adicione dados de contato na seção apropriada."
+      ]
+    },
+    {
+      "test_penalty.py::test_incorrect_html_structure": [
+        "O HTML está bem estruturado e contém as principais tags básicas.",
+        "A estrutura do HTML está incorreta. Certifique-se de incluir <!DOCTYPE>, <html>, <head> e <body>."
+      ]
+    },
+    {
+      "test_penalty.py::test_uses_inline_styles_only": [
+        "A página utiliza estilos externos ou internos adequadamente.",
+        "Apenas estilos inline foram encontrados. Use <style> no <head> ou um arquivo CSS externo."
+      ]
+    },
+    {
+      "test_penalty.py::test_uses_table_for_layout": [
+        "Tabelas são usadas apenas para dados tabulares.",
+        "Tabela foi usada para layout. Evite utilizar <table> para estrutura visual da página."
+      ]
+    }
+  ]
+}
