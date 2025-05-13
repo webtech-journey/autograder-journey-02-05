@@ -55,9 +55,24 @@ def test_responsive_layout():
     fail: O layout não utiliza a estrutura responsiva do Bootstrap. Utilize 'container', 'row' e 'col' corretamente.
     """
     soup = parse_html()
-    assert soup.find(class_='container'), "Classe 'container' do Bootstrap ausente."
-    assert soup.find(class_='row'), "Classe 'row' do Bootstrap ausente."
-    assert soup.find(class_='col'), "Classe 'col' do Bootstrap ausente."
+
+    has_container = any(
+        any(cls.startswith('container') for cls in tag.get('class', []))
+        for tag in soup.find_all(class_=True)
+    )
+    has_row = any(
+        any(cls.startswith('row') for cls in tag.get('class', []))
+        for tag in soup.find_all(class_=True)
+    )
+    has_col = any(
+        any(cls.startswith('col') for cls in tag.get('class', []))
+        for tag in soup.find_all(class_=True)
+    )
+
+    assert has_container, "Classe 'container' do Bootstrap ausente."
+    assert has_row, "Classe 'row' do Bootstrap ausente."
+    assert has_col, "Classe 'col' do Bootstrap ausente."
+
 
 def test_custom_css_file():
     """
