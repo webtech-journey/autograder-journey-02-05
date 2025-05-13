@@ -16,7 +16,7 @@ author = os.getenv("GITHUB_ACTOR")
 scorer = Scorer.create_with_scores("tests",author,"test_base.py","test_bonus.py","test_penalty.py")
 final_score = scorer.final_score
 
-generate_feedback_from_docstrings()
+
 feedback = scorer.get_feedback()
 overwrite_report_in_repo(github_token,new_content=feedback)
 
